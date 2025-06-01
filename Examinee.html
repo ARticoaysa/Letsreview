@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Test Proctor - Tester</title>
+<title>Let's Review - Examinee</title>
 <style>
-  /* Modern styling */
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
   * {
     box-sizing: border-box;
@@ -109,16 +108,25 @@
   #wrongQuestions li {
     margin-bottom: 0.75rem;
   }
+  #signature {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ccc;
+    font-style: italic;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
-<header>Test Proctor - Tester</header>
+<header>Let's Review - Examinee</header>
 <main>
   <div id="timer" class="timer">Loading test...</div>
   <div id="questions"></div>
   <button id="submitBtn" disabled>Submit Test</button>
   <div id="result"></div>
   <div id="wrongQuestions"></div>
+  <div id="signature">by: Sweetgwapa</div>
 </main>
 
 <script>
@@ -149,7 +157,7 @@
         return false;
       }
       testData = data;
-      questions = data.questions.slice(0, 100); // max 100 questions
+      questions = data.questions.slice(0, 1000);
       timeLeft = testData.timeLimitSeconds;
       return true;
     } catch (e) {
@@ -262,5 +270,8 @@
 
   submitBtn.addEventListener('click', submitTest);
 </script>
+
+<div id="signature">by: Sweetgwapa</div>
+
 </body>
 </html>
