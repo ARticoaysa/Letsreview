@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Let's Review - Examinee</title>
-<style>
+!DOCTYPE html>
+html lang="en">
+head>
+meta charset="UTF-8" />
+meta name="viewport" content="width=device-width, initial-scale=1" />
+title>Let's Review - Examinee/title>
+style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
   * {
     box-sizing: border-box;
@@ -116,20 +116,20 @@
     font-style: italic;
     text-align: center;
   }
-</style>
-</head>
-<body>
-<header>Let's Review - Examinee</header>
-<main>
-  <div id="timer" class="timer">Loading test...</div>
-  <div id="questions"></div>
-  <button id="submitBtn" disabled>Submit Test</button>
-  <div id="result"></div>
-  <div id="wrongQuestions"></div>
-  <div id="signature">by: Sweetgwapa</div>
-</main>
+/style>
+/head>
+body>
+header>Let's Review - Examinee/header>
+main>
+  div id="timer" class="timer">Loading test.../div>
+  div id="questions">/div>
+  button id="submitBtn" disabled>Submit Test/button>
+  div id="result">/div>
+  div id="wrongQuestions">/div>
+  div id="signature">by: Sweetgwapa/div>
+/main>
 
-<script>
+script>
   let testData = null;
   let timeLeft = 0;
   let timerId = null;
@@ -183,7 +183,7 @@
     timerId = setInterval(() => {
       timeLeft--;
       updateTimerDisplay();
-      if (timeLeft <= 0) {
+      if (timeLeft = 0) {
         clearInterval(timerId);
         alert('Time is up! The test will be submitted automatically.');
         submitTest();
@@ -196,7 +196,7 @@
     questions.forEach((q, i) => {
       const container = document.createElement('div');
       container.className = 'question';
-      container.innerHTML = `<h3>Q${i + 1}. ${q.question}</h3>`;
+      container.innerHTML = `h3>Q${i + 1}. ${q.question}/h3>`;
       const answersDiv = document.createElement('div');
       answersDiv.className = 'answers';
 
@@ -247,14 +247,14 @@
     resultDiv.textContent = `Test complete! Score: ${score} / ${totalQuestions} (${percent}%)`;
 
     if (incorrect.length > 0) {
-      let html = '<h4>Questions you got wrong:</h4><div><ul>';
+      let html = 'h4>Questions you got wrong:/h4>div>ul>';
       incorrect.forEach(item => {
-        html += `<li><b>Question:</b> ${item.question}<br><b>Your answer:</b> ${item.userAnswer}<br><b>Correct answer:</b> ${item.correctAnswer}</li>`;
+        html += `li>b>Question:/b> ${item.question}br>b>Your answer:/b> ${item.userAnswer}br>b>Correct answer:/b> ${item.correctAnswer}/li>`;
       });
-      html += '</ul></div>';
+      html += '/ul>/div>';
       wrongQuestionsDiv.innerHTML = html;
     } else {
-      wrongQuestionsDiv.innerHTML = '<h4>Excellent! You answered all questions correctly.</h4>';
+      wrongQuestionsDiv.innerHTML = 'h4>Excellent! You answered all questions correctly./h4>';
     }
   }
 
@@ -269,9 +269,9 @@
   };
 
   submitBtn.addEventListener('click', submitTest);
-</script>
+/script>
 
-<div id="signature">by: Sweetgwapa</div>
+div id="signature">by: Sweetgwapa/div>
 
 </body>
 </html>
